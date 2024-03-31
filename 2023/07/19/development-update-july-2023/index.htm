@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Development Update - July 2023</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" as="style" href="../../../../assets/built/screen.css?v=280c5cf32d">
+    <link rel="preload" as="script" href="../../../../assets/built/casper.js?v=280c5cf32d">
+
+    <link rel="stylesheet" type="text/css" href="../../../../assets/built/screen.css?v=280c5cf32d">
+
+    <meta name="description" content="It&#x27;s time for a first look at some of the server updates you can expect to see very soon!">
+    <link rel="icon" href="../../../../content/images/size/w256h256/2021/11/favicontest.png" type="image/png">
+    <link rel="canonical" href="index.htm">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.htm">
+    
+    <meta property="og:site_name" content="The Hive - Minecraft Server">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Development Update - July 2023">
+    <meta property="og:description" content="It&#x27;s time for a first look at some of the server updates you can expect to see very soon!">
+    <meta property="og:url" content="https://playhive.com/2023/07/19/development-update-july-2023/">
+    <meta property="og:image" content="https://playhive.com/content/images/2023/07/gbr5z1zp8n.jpg">
+    <meta property="article:published_time" content="2023-07-19T17:40:57.000Z">
+    <meta property="article:modified_time" content="2023-07-19T17:42:14.000Z">
+    <meta property="article:tag" content="Behind the Scenes">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/theHiveMC">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Development Update - July 2023">
+    <meta name="twitter:description" content="It&#x27;s time for a first look at some of the server updates you can expect to see very soon!">
+    <meta name="twitter:url" content="https://playhive.com/2023/07/19/development-update-july-2023/">
+    <meta name="twitter:image" content="https://playhive.com/content/images/2023/07/1rltu7zxqb-1.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Hive Team">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Behind the Scenes">
+    <meta name="twitter:site" content="@theHiveMC">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "The Hive - Minecraft Server",
+        "url": "https://playhive.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://playhive.com/content/images/2021/11/Hive---Yellow.png"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Hive Team",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://playhive.com/content/images/2020/12/discord-final.png",
+            "width": 1024,
+            "height": 1024
+        },
+        "url": "https://playhive.com/author/hiveteam/",
+        "sameAs": []
+    },
+    "headline": "Development Update - July 2023",
+    "url": "https://playhive.com/2023/07/19/development-update-july-2023/",
+    "datePublished": "2023-07-19T17:40:57.000Z",
+    "dateModified": "2023-07-19T17:42:14.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://playhive.com/content/images/2023/07/gbr5z1zp8n.jpg",
+        "width": 1920,
+        "height": 1080
+    },
+    "keywords": "Behind the Scenes",
+    "description": "It&#x27;s time for a first look at some of the server updates you can expect to see very soon!",
+    "mainEntityOfPage": "https://playhive.com/2023/07/19/development-update-july-2023/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.59">
+    <link rel="alternate" type="application/rss+xml" title="The Hive - Minecraft Server" href="../../../../rss/index.htm">
+    
+    <script defer="" src="../../../../ghost/sodo-search%40~1.1/umd/sodo-search.min.js" data-key="e305d7442526b011a9c83df0e5" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://playhive.com/" crossorigin="anonymous"></script>
+    
+    <link href="https://playhive.com/webmentions/receive/" rel="webmention">
+    <script defer="" src="../../../../public/cards.min.js?v=280c5cf32d"></script>
+    <link rel="stylesheet" type="text/css" href="../../../../public/cards.min.css?v=280c5cf32d">
+    <!-- Hive Font Override -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="../../../../css2?family=Lato:wght@400;700;900&family=Quicksand:wght@400;600;700&family=Rubik:wght@300;400;600&display=swap" rel="stylesheet"> 
+
+<!-- Hive Style Additions -->
+<style>
+    #ghost-portal-root, a[href^="https://ghost.org"], a[href^="#/portal/signup"], .footer-cta {
+        display: none;
+    }
+    
+    /* Font overrides */
+    body, p, .gh-content > p, .gh-content > ul {
+        font-family: 'Lato', sans-serif;
+    }
+    
+    h1, h2, h3, .site-header-content p, .post-card-tags, .gh-head, .kg-card figcaption, .post-card-meta {
+    	font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+    }
+    
+    /* Style changes */
+    .kg-video-container {
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    
+    .post-card-title, .article-title, .topic-archive-link { font-weight: 700 }
+    
+    .post-card-meta { font-size: 92%; }
+    
+    .post-card-image, .article-image img, .kg-image-card img { border-radius: 8px; }
+    
+    .kg-gallery-image img { border-radius: 6px; }
+    
+    .site-logo { max-height: 140px; }
+    
+    .gh-head-logo img { max-height: 50px; }
+    
+    .gh-head-brand { height: 60px; }
+</style>
+
+<!-- Announcekit Widget -->
+<script>
+  window.announcekit = (window.announcekit || { queue: [], on: function(n, x) {
+    window.announcekit.queue.push([n, x]); }, push: function(x) { window.announcekit.queue.push(x); }
+  });
+
+  window.announcekit.push({
+    "widget": "https://updates.playhive.com/widgets/v2/2TBGyk",
+    "selector": ".announcekit-widget"
+  })
+</script>
+<script async="" src="../../../../widget-v2.js"></script><style>:root {--ghost-accent-color: #15171A;}</style>
+
+</head>
+<body class="post-template tag-behind-the-scenes tag-hash-import-2023-08-22-03-16 is-head-left-logo has-cover">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head outer">
+        <div class="gh-head-inner inner">
+            <div class="gh-head-brand">
+                <a class="gh-head-logo" href="../../../../index.htm">
+                        <img src="../../../../content/images/2021/11/Hive---Yellow.png" alt="The Hive - Minecraft Server">
+                </a>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="../../../../index.htm">Home</a></li>
+    <li class="nav-forums"><a href="https://forum.playhive.com/">Forums</a></li>
+    <li class="nav-rules"><a href="https://playhive.com/rules/">Rules</a></li>
+    <li class="nav-help-and-support"><a href="https://support.playhive.com">Help and Support</a></li>
+    <li class="nav-changelog"><a href="https://updates.playhive.com/">Changelog</a></li>
+    <li class="nav-discord"><a href="https://support.playhive.com/discord/">Discord</a></li>
+    <li class="nav-profile-search"><a href="../../../../search-profile.html">Profile Search</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                        <button class="gh-search gh-icon-btn" data-ghost-search=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+
+
+
+<main id="site-main" class="site-main">
+<article class="article post tag-behind-the-scenes tag-hash-import-2023-08-22-03-16 ">
+
+    <header class="article-header gh-canvas">
+
+        <div class="article-tag post-card-tags">
+                <span class="post-card-primary-tag">
+                    <a href="../../../../tag/behind-the-scenes/index.htm">Behind the Scenes</a>
+                </span>
+        </div>
+
+        <h1 class="article-title">Development Update - July 2023</h1>
+
+            <p class="article-excerpt">It&#x27;s time for a first look at some of the server updates you can expect to see very soon!</p>
+
+        <div class="article-byline">
+        <section class="article-byline-content">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="../../../../author/hiveteam/index.htm" class="author-avatar">
+                        <img class="author-profile-image" src="../../../../content/images/size/w100/2020/12/discord-final.png" alt="Hive Team">
+                    </a>
+                </li>
+            </ul>
+
+            <div class="article-byline-meta">
+                <h4 class="author-name"><a href="../../../../author/hiveteam/index.htm">Hive Team</a></h4>
+                <div class="byline-meta-content">
+                    <time class="byline-meta-date" datetime="2023-07-19">Jul 19, 2023</time>
+                        <span class="byline-reading-time"><span class="bull">&bull;</span> 3 min read</span>
+                </div>
+            </div>
+
+        </section>
+        </div>
+
+            <figure class="article-image">
+                <img srcset="../../../../content/images/size/w300/2023/07/gbr5z1zp8n.jpg 300w,
+                            ../../../../content/images/size/w600/2023/07/gbr5z1zp8n.jpg 600w,
+                            ../../../../content/images/size/w1000/2023/07/gbr5z1zp8n.jpg 1000w,
+                            ../../../../content/images/size/w2000/2023/07/gbr5z1zp8n.jpg 2000w" sizes="(min-width: 1400px) 1400px, 92vw" src="../../../../content/images/size/w2000/2023/07/gbr5z1zp8n.jpg" alt="A Minecraft build picture. Two NPCs in the foreground lead way to a bee-themed statue.">
+            </figure>
+
+    </header>
+
+    <section class="gh-content gh-canvas">
+        <p>There have been many exciting things going on recently at The Hive! In addition to working on the server, we were trusted with bringing this year's Marketplace Summer Celebration to life; a Trails &amp; Tales-themed live event, a free world, and 14 character creator items.</p><p>Now that we've wrapped up that project, we wanted to give you a first look at some of the server updates you can expect to see very soon!</p><h1 id="a-whole-new-hub">A whole new... hub?</h1><p>That's right, a brand-new hub is one of the first updates you'll see this summer. Although our current hub has served us well over the past 5 years, it was clear that change was needed.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../../../../content/images/2023/07/1rltu7zxqb.jpg" class="kg-image" alt="A Minecraft screenshot. A break in green foliage reveals a large ornate castle." loading="lazy" width="1920" height="1080" srcset="../../../../content/images/size/w600/2023/07/1rltu7zxqb.jpg 600w, ../../../../content/images/size/w1000/2023/07/1rltu7zxqb.jpg 1000w, ../../../../content/images/size/w1600/2023/07/1rltu7zxqb.jpg 1600w, ../../../../content/images/2023/07/1rltu7zxqb.jpg 1920w" sizes="(min-width: 1200px) 1200px"><figcaption>The castle has undergone a vast renovation!</figcaption></figure><p>Simply put, we were running out of space. We added the Arcade to support more games without further cluttering our main hub, but it did not meet our expectations. Games being hidden away in a different hub made them much harder for first-time players. When we moved Capture The Flag from the Arcade to the main hub, we saw an instant 30% increase in active players, and it has remained a popular game to this day.</p><p>As such, we will be vaulting the Arcade when the new hub is released. Don't worry! None of the Arcade games are being removed; they now have a home in the much-improved spawn of the new hub! Sadly, this does mean the hub-microgames will be going for now, but we hope to revisit some of them in the future.</p><p>We're super excited about the new hub; it's much bigger - perfect for mounts and future events, better optimized, and shows off all our high-quality games in a much more organized fashion.</p><h1 id="hubs-but-smaller">Hubs... but smaller</h1><p>With the release of Treasure Wars: Seasons, we'll launch another brand-new feature to The Hive: Microhubs.</p><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="../../../../content/images/2023/07/0nnra1l8g1.jpg" width="1920" height="1080" loading="lazy" alt="" srcset="../../../../content/images/size/w600/2023/07/0nnra1l8g1.jpg 600w, ../../../../content/images/size/w1000/2023/07/0nnra1l8g1.jpg 1000w, ../../../../content/images/size/w1600/2023/07/0nnra1l8g1.jpg 1600w, ../../../../content/images/2023/07/0nnra1l8g1.jpg 1920w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="../../../../content/images/2023/07/7k5ccyk8hq-1.jpg" width="1920" height="1080" loading="lazy" alt="" srcset="../../../../content/images/size/w600/2023/07/7k5ccyk8hq-1.jpg 600w, ../../../../content/images/size/w1000/2023/07/7k5ccyk8hq-1.jpg 1000w, ../../../../content/images/size/w1600/2023/07/7k5ccyk8hq-1.jpg 1600w, ../../../../content/images/2023/07/7k5ccyk8hq-1.jpg 1920w" sizes="(min-width: 720px) 720px"></div></div></div><figcaption>Some in-development screenshots of the Treasure Wars microhub.</figcaption></figure><p>Microhubs are designed specifically for their game. They provide tailored functionality, like access to game-specific merchants, bundles, and even features like prestige. Additionally, they become a great place to meet other players interested in the same game as you.</p><p>Treasure Wars will be the first game to get a microhub, but more will come in the future (cough... SkyWars).</p><p>To ensure you can always get back to playing as quickly as possible, if you leave The Hive and rejoin within 24 hours, you will be automatically placed back in the last hub you were in! This allows you to jump straight back into the action.</p><h1 id="play-time">Play Time!</h1><p>We're also tirelessly working on some incredible game updates for you. Some of these updates needed special functionality in their microhubs for brand-new features, which is why the hub updates took priority.</p><h2 id="treasure-wars-seasons">Treasure Wars: Seasons</h2><p>It's happening! We're currently working on Treasure Wars: Seasons. In fact, we're taking this opportunity to recode the game completely. Treasure Wars is one of our oldest games and desperately needs modernization.</p><p>It's a big change, but a needed one!</p><p>We can't wait to share this revitalized game version with you. We'll be sharing teasers and more information about that soon.</p><h2 id="murder-mystery">Murder Mystery</h2><p>Maps, maps, maps! There was more information to share, but it may have been lost somewhere in the backrooms...</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../../../../content/images/2023/07/erfkum3j28.jpg" class="kg-image" alt="A Minecraft screenshot of a liminal space." loading="lazy" width="1920" height="1080" srcset="../../../../content/images/size/w600/2023/07/erfkum3j28.jpg 600w, ../../../../content/images/size/w1000/2023/07/erfkum3j28.jpg 1000w, ../../../../content/images/size/w1600/2023/07/erfkum3j28.jpg 1600w, ../../../../content/images/2023/07/erfkum3j28.jpg 1920w" sizes="(min-width: 1200px) 1200px"><figcaption>Where am I?!</figcaption></figure><h2 id="hide-and-seek-quality-of-life-update">Hide and Seek: Quality of Life Update</h2><p>A fresh coat of paint is heading to Hide and Seek. This update primarily focuses on improving quality of life, such as better chat messages, improved UIs, and bug fixes. Oh... did we mention it will also come with brand-new maps and 25 more levels?</p><h2 id="skywars-update">SkyWars Update</h2><p>We hear you SkyWars players! Although it's early days, a SkyWars update is in the pipeline. Be sure to follow us on our various social media profiles to be kept up to date!</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../../../../content/images/2023/07/gipkn5edeu.jpg" class="kg-image" alt="A Minecraft screenshot of a themed world. A river in the foreground leads way to roman architecture in the background." loading="lazy" width="1920" height="1080" srcset="../../../../content/images/size/w600/2023/07/gipkn5edeu.jpg 600w, ../../../../content/images/size/w1000/2023/07/gipkn5edeu.jpg 1000w, ../../../../content/images/size/w1600/2023/07/gipkn5edeu.jpg 1600w, ../../../../content/images/2023/07/gipkn5edeu.jpg 1920w" sizes="(min-width: 1200px) 1200px"><figcaption>We're not sure when or where this was taken...</figcaption></figure><p>That concludes this development update. We hope you're as excited as we are. As always, we're humbled by the incredible support, and we thank you for your patience.</p>
+    </section>
+
+
+</article>
+</main>
+
+
+
+
+            <aside class="read-more-wrap outer">
+                <div class="read-more inner">
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="../../../../2024/03/29/bedwars-pre-season-beta/index.htm">
+
+        <img class="post-card-image" srcset="../../../../content/images/size/w300/2024/03/bedwars_release5.png 300w,
+                    ../../../../content/images/size/w600/2024/03/bedwars_release5.png 600w,
+                    ../../../../content/images/size/w1000/2024/03/bedwars_release5.png 1000w,
+                    ../../../../content/images/size/w2000/2024/03/bedwars_release5.png 2000w" sizes="(max-width: 1000px) 400px, 800px" src="../../../../content/images/size/w600/2024/03/bedwars_release5.png" alt="BedWars: Pre-Season Beta" loading="lazy">
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../../../../2024/03/29/bedwars-pre-season-beta/index.htm">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    BedWars: Pre-Season Beta
+                </h2>
+            </header>
+                <div class="post-card-excerpt">BedWars: Pre-Season Beta has been officially released!</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2024-03-30">Mar 30, 2024</time>
+                <span class="post-card-meta-length">3 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="../../../../2024/03/25/announcing-skyblock-mmo/index.htm">
+
+        <img class="post-card-image" srcset="../../../../content/images/size/w300/2024/03/image--3-.png 300w,
+                    ../../../../content/images/size/w600/2024/03/image--3-.png 600w,
+                    ../../../../content/images/size/w1000/2024/03/image--3-.png 1000w,
+                    ../../../../content/images/size/w2000/2024/03/image--3-.png 2000w" sizes="(max-width: 1000px) 400px, 800px" src="../../../../content/images/size/w600/2024/03/image--3-.png" alt="Announcing a brand new SkyBlock/MMO server, by The Hive" loading="lazy">
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../../../../2024/03/25/announcing-skyblock-mmo/index.htm">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Announcing a brand new SkyBlock/MMO server, by The Hive
+                </h2>
+            </header>
+                <div class="post-card-excerpt">We're excited to announce that this year, we'll be launching a brand new Bedrock Featured Server: a persistent SkyBlock/MMO.</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2024-03-25">Mar 25, 2024</time>
+                <span class="post-card-meta-length">1 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="../../../../2024/03/15/bed-wars-release-date/index.htm">
+
+        <img class="post-card-image" srcset="../../../../content/images/size/w300/2024/03/bw-1.jpg 300w,
+                    ../../../../content/images/size/w600/2024/03/bw-1.jpg 600w,
+                    ../../../../content/images/size/w1000/2024/03/bw-1.jpg 1000w,
+                    ../../../../content/images/size/w2000/2024/03/bw-1.jpg 2000w" sizes="(max-width: 1000px) 400px, 800px" src="../../../../content/images/size/w600/2024/03/bw-1.jpg" alt="BedWars: Release Date" loading="lazy">
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../../../../2024/03/15/bed-wars-release-date/index.htm">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    BedWars: Release Date
+                </h2>
+            </header>
+                <div class="post-card-excerpt">We're excited to announce that BedWars will be released on the 29th of March!</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2024-03-15">Mar 15, 2024</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                </div>
+            </aside>
+
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="../../../../index.htm">The Hive - Minecraft Server</a> &copy; 2024</section>
+            <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-careers"><a href="https://jobs.playhive.com">Careers</a></li>
+    <li class="nav-support"><a href="https://support.playhive.com">Support</a></li>
+    <li class="nav-become-a-helper"><a href="https://support.playhive.com/helper/">Become a Helper</a></li>
+    <li class="nav-become-a-partner"><a href="https://support.playhive.com/partners/">Become a Partner</a></li>
+</ul>
+
+            </nav>
+            <div class="gh-powered-by"><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script src="../../../../jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+</script>
+<script src="../../../../assets/built/casper.js?v=280c5cf32d"></script>
+<script>
+$(document).ready(function () {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $(".gh-content").fitVids();
+});
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="../../../../gtag/js?id=G-Y2WSVVSE2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y2WSVVSE2K');
+</script>
+
+<!-- Reamaze Support Portal -->
+<script type="text/javascript" async="" src="../../../../assets/reamaze.js"></script>
+
+<script type="text/javascript">
+    var _support = _support || { ui: {}, user: {} };
+    
+    _support["account"] = "hivebedrock";
+    _support["ui"]["contactMode"] = "mixed";
+    _support["ui"]["enableKb"] = "false";
+    
+    _support["ui"]["styles"] = {
+        widgetColor: "rgb(94, 34, 94)",
+    };
+    
+    _support["ui"]["widget"] = {
+        label: false,
+        icon: "chat",
+        position: "bottom-right",
+    };
+    
+    _support["apps"] = {
+        faq: { enabled: false },
+        recentConversations: {},
+        orders: {},
+    };
+</script>
+
+</body>
+</html>
