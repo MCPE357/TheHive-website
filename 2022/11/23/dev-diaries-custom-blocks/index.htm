@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Dev Diaries: Custom Blocks</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" as="style" href="../../../../assets/built/screen.css?v=280c5cf32d">
+    <link rel="preload" as="script" href="../../../../assets/built/casper.js?v=280c5cf32d">
+
+    <link rel="stylesheet" type="text/css" href="../../../../assets/built/screen.css?v=280c5cf32d">
+
+    <meta name="description" content="Over the past month, we&#x27;ve worked on new tools to bring custom blocks to The Hive. This is essential to achieve our long-term content ideas that require expansive, immersive worlds.">
+    <link rel="icon" href="../../../../content/images/size/w256h256/2021/11/favicontest.png" type="image/png">
+    <link rel="canonical" href="index.htm">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.htm">
+    
+    <meta property="og:site_name" content="The Hive - Minecraft Server">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Dev Diaries: Custom Blocks">
+    <meta property="og:description" content="Over the past month, we&#x27;ve worked on new tools to bring custom blocks to The Hive. This is essential to achieve our long-term content ideas that require expansive, immersive worlds.">
+    <meta property="og:url" content="https://playhive.com/2022/11/23/dev-diaries-custom-blocks/">
+    <meta property="og:image" content="https://playhive.com/content/images/2022/11/Custom-Blocks.jpg">
+    <meta property="article:published_time" content="2022-11-23T14:57:59.000Z">
+    <meta property="article:modified_time" content="2022-11-23T14:57:59.000Z">
+    <meta property="article:tag" content="Behind the Scenes">
+    <meta property="article:tag" content="Dev Diaries">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/theHiveMC">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dev Diaries: Custom Blocks">
+    <meta name="twitter:description" content="Over the past month, we&#x27;ve worked on new tools to bring custom blocks to The Hive. This is essential to achieve our long-term content ideas that require expansive, immersive worlds.">
+    <meta name="twitter:url" content="https://playhive.com/2022/11/23/dev-diaries-custom-blocks/">
+    <meta name="twitter:image" content="https://playhive.com/content/images/2022/11/Custom-Blocks.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Hive Team">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Behind the Scenes, Dev Diaries">
+    <meta name="twitter:site" content="@theHiveMC">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "The Hive - Minecraft Server",
+        "url": "https://playhive.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://playhive.com/content/images/2021/11/Hive---Yellow.png"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Hive Team",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://playhive.com/content/images/2020/12/discord-final.png",
+            "width": 1024,
+            "height": 1024
+        },
+        "url": "https://playhive.com/author/hiveteam/",
+        "sameAs": []
+    },
+    "headline": "Dev Diaries: Custom Blocks",
+    "url": "https://playhive.com/2022/11/23/dev-diaries-custom-blocks/",
+    "datePublished": "2022-11-23T14:57:59.000Z",
+    "dateModified": "2022-11-23T14:57:59.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://playhive.com/content/images/2022/11/Custom-Blocks.jpg",
+        "width": 1920,
+        "height": 1080
+    },
+    "keywords": "Behind the Scenes, Dev Diaries",
+    "description": "Over the past month, we&#x27;ve worked on new tools to bring custom blocks to The Hive. This is essential to achieve our long-term content ideas that require expansive, immersive worlds.",
+    "mainEntityOfPage": "https://playhive.com/2022/11/23/dev-diaries-custom-blocks/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.59">
+    <link rel="alternate" type="application/rss+xml" title="The Hive - Minecraft Server" href="../../../../rss/index.htm">
+    
+    <script defer="" src="../../../../ghost/sodo-search%40~1.1/umd/sodo-search.min.js" data-key="e305d7442526b011a9c83df0e5" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://playhive.com/" crossorigin="anonymous"></script>
+    
+    <link href="https://playhive.com/webmentions/receive/" rel="webmention">
+    <script defer="" src="../../../../public/cards.min.js?v=280c5cf32d"></script>
+    <link rel="stylesheet" type="text/css" href="../../../../public/cards.min.css?v=280c5cf32d">
+    <!-- Hive Font Override -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="../../../../css2?family=Lato:wght@400;700;900&family=Quicksand:wght@400;600;700&family=Rubik:wght@300;400;600&display=swap" rel="stylesheet"> 
+
+<!-- Hive Style Additions -->
+<style>
+    #ghost-portal-root, a[href^="https://ghost.org"], a[href^="#/portal/signup"], .footer-cta {
+        display: none;
+    }
+    
+    /* Font overrides */
+    body, p, .gh-content > p, .gh-content > ul {
+        font-family: 'Lato', sans-serif;
+    }
+    
+    h1, h2, h3, .site-header-content p, .post-card-tags, .gh-head, .kg-card figcaption, .post-card-meta {
+    	font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+    }
+    
+    /* Style changes */
+    .kg-video-container {
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    
+    .post-card-title, .article-title, .topic-archive-link { font-weight: 700 }
+    
+    .post-card-meta { font-size: 92%; }
+    
+    .post-card-image, .article-image img, .kg-image-card img { border-radius: 8px; }
+    
+    .kg-gallery-image img { border-radius: 6px; }
+    
+    .site-logo { max-height: 140px; }
+    
+    .gh-head-logo img { max-height: 50px; }
+    
+    .gh-head-brand { height: 60px; }
+</style>
+
+<!-- Announcekit Widget -->
+<script>
+  window.announcekit = (window.announcekit || { queue: [], on: function(n, x) {
+    window.announcekit.queue.push([n, x]); }, push: function(x) { window.announcekit.queue.push(x); }
+  });
+
+  window.announcekit.push({
+    "widget": "https://updates.playhive.com/widgets/v2/2TBGyk",
+    "selector": ".announcekit-widget"
+  })
+</script>
+<script async="" src="../../../../widget-v2.js"></script><style>:root {--ghost-accent-color: #15171A;}</style>
+
+</head>
+<body class="post-template tag-behind-the-scenes tag-dev-diaries tag-hash-import-2023-08-22-03-16 is-head-left-logo has-cover">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head outer">
+        <div class="gh-head-inner inner">
+            <div class="gh-head-brand">
+                <a class="gh-head-logo" href="../../../../index.htm">
+                        <img src="../../../../content/images/2021/11/Hive---Yellow.png" alt="The Hive - Minecraft Server">
+                </a>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="../../../../index.htm">Home</a></li>
+    <li class="nav-forums"><a href="https://forum.playhive.com/">Forums</a></li>
+    <li class="nav-rules"><a href="https://playhive.com/rules/">Rules</a></li>
+    <li class="nav-help-and-support"><a href="https://support.playhive.com">Help and Support</a></li>
+    <li class="nav-changelog"><a href="https://updates.playhive.com/">Changelog</a></li>
+    <li class="nav-discord"><a href="https://support.playhive.com/discord/">Discord</a></li>
+    <li class="nav-profile-search"><a href="../../../../search-profile.html">Profile Search</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                        <button class="gh-search gh-icon-btn" data-ghost-search=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+
+
+
+<main id="site-main" class="site-main">
+<article class="article post tag-behind-the-scenes tag-dev-diaries tag-hash-import-2023-08-22-03-16 ">
+
+    <header class="article-header gh-canvas">
+
+        <div class="article-tag post-card-tags">
+                <span class="post-card-primary-tag">
+                    <a href="../../../../tag/behind-the-scenes/index.htm">Behind the Scenes</a>
+                </span>
+        </div>
+
+        <h1 class="article-title">Dev Diaries: Custom Blocks</h1>
+
+            <p class="article-excerpt">Over the past month, we&#x27;ve worked on new tools to bring custom blocks to The Hive. This is essential to achieve our long-term content ideas that require expansive, immersive worlds.</p>
+
+        <div class="article-byline">
+        <section class="article-byline-content">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="../../../../author/hiveteam/index.htm" class="author-avatar">
+                        <img class="author-profile-image" src="../../../../content/images/size/w100/2020/12/discord-final.png" alt="Hive Team">
+                    </a>
+                </li>
+            </ul>
+
+            <div class="article-byline-meta">
+                <h4 class="author-name"><a href="../../../../author/hiveteam/index.htm">Hive Team</a></h4>
+                <div class="byline-meta-content">
+                    <time class="byline-meta-date" datetime="2022-11-23">Nov 23, 2022</time>
+                        <span class="byline-reading-time"><span class="bull">&bull;</span> 4 min read</span>
+                </div>
+            </div>
+
+        </section>
+        </div>
+
+            <figure class="article-image">
+                <img srcset="../../../../content/images/size/w300/2022/11/Custom-Blocks.jpg 300w,
+                            ../../../../content/images/size/w600/2022/11/Custom-Blocks.jpg 600w,
+                            ../../../../content/images/size/w1000/2022/11/Custom-Blocks.jpg 1000w,
+                            ../../../../content/images/size/w2000/2022/11/Custom-Blocks.jpg 2000w" sizes="(min-width: 1400px) 1400px, 92vw" src="../../../../content/images/size/w2000/2022/11/Custom-Blocks.jpg" alt="Dev Diaries: Custom Blocks">
+            </figure>
+
+    </header>
+
+    <section class="gh-content gh-canvas">
+        <p><em>Dev diaries are a series of articles from the development team giving you a raw insight into the thoughts and ideas that go into making The Hive.</em></p><p>The Hive first used custom blocks in July 2021 to bring the iconic world of <a href="https://www.youtube.com/watch?v=qDGOk53rJ2g&ref=playhive.com">Sonic to Minecraft</a>. We were incredibly proud of our work on the event. It enlightened us to just how immersive worlds in Minecraft can be by combining entities, animations, sounds, and custom blocks.</p><p>Although we made some essential tools to assist us in using custom blocks, it was a very slow, tedious process that relied heavily on our development teams.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../../../../content/images/2022/11/Custom-Blocks-Test-Build-2.jpg" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="../../../../content/images/size/w600/2022/11/Custom-Blocks-Test-Build-2.jpg 600w, ../../../../content/images/size/w1000/2022/11/Custom-Blocks-Test-Build-2.jpg 1000w, ../../../../content/images/size/w1600/2022/11/Custom-Blocks-Test-Build-2.jpg 1600w, ../../../../content/images/2022/11/Custom-Blocks-Test-Build-2.jpg 1920w" sizes="(min-width: 1200px) 1200px"><figcaption>An example build from our build team. Custom plants, walls, roof tiles, and more are being used. Screenshot taken in Java Edition. Note: build is for testing purposes only.</figcaption></figure><p>Over the past month, we've worked on new tools to bring custom blocks to The Hive. Most importantly, these tools empower our creative team of artists and builders to take control with little developer input. This is essential to achieve our long-term content ideas that require expansive, immersive worlds.</p><h2 id="custom-blocks-in-java">Custom Blocks in Java</h2><p>While it may not be common knowledge, our build team uses Minecraft: Java Edition to create our worlds. This allows us to use plugins like WorldEdit to develop and create amazing worlds quickly. These worlds are exported from Java Edition into our custom world format, which we specially created for the needs of a minigame server.</p><p><em>If you'd like to hear about our custom world format, including the config/meta-store system within it, let us know!</em></p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../../../../content/images/2022/11/Block4.jpg" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="../../../../content/images/size/w600/2022/11/Block4.jpg 600w, ../../../../content/images/size/w1000/2022/11/Block4.jpg 1000w, ../../../../content/images/size/w1600/2022/11/Block4.jpg 1600w, ../../../../content/images/2022/11/Block4.jpg 1920w" sizes="(min-width: 1200px) 1200px"><figcaption>A selection of custom cuboid blocks, including a crate with custom geometry.</figcaption></figure><p>Because we rely on Java Edition, we've made a <a href="https://fabricmc.net/?ref=playhive.com">Fabric</a> client mod and a Spigot (Paper) plugin that brings the Bedrock Edition custom blocks to Java. This allows our builders to create worlds with our custom blocks natively in Java Edition.</p><p>It's a game-changer.</p><h3 id="how-does-it-work">How does it work?</h3><p>Java Edition and Bedrock Edition formats are not interchangeable. As such, we must convert our Bedrock resource and behavior packs into formats that Minecraft (or our mod) can understand.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../../../../content/images/2022/11/Custom-Blocks-Test-Build.jpg" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="../../../../content/images/size/w600/2022/11/Custom-Blocks-Test-Build.jpg 600w, ../../../../content/images/size/w1000/2022/11/Custom-Blocks-Test-Build.jpg 1000w, ../../../../content/images/size/w1600/2022/11/Custom-Blocks-Test-Build.jpg 1600w, ../../../../content/images/2022/11/Custom-Blocks-Test-Build.jpg 1920w" sizes="(min-width: 1200px) 1200px"><figcaption>Another example build from our build team. Screenshot taken in Java Edition. Note: build is for testing purposes only.</figcaption></figure><p>This is where our Spigot plugin comes in. When the build server is booted, it loads the Bedrock resource and behavior packs, systematically reading and converting all required data points:</p><ul><li>Model geometry, including UV co-ordinate translation</li><li>Material instances</li><li>Placement logic (custom block states)</li><li>Language files (block names)</li><li>Extra data: break times, sounds, friction, light emission</li></ul><p>We then dynamically inject our custom blocks into the Java Edition (Spigot) server so that to the server, they seem and act like any other vanilla block. This means popular plugins, such as <a href="https://github.com/IntellectualSites/FastAsyncWorldEdit?ref=playhive.com">WorldEdit</a>, <a href="https://github.com/IntellectualSites/fastasyncvoxelsniper?ref=playhive.com">VoxelSniper</a>, and <a href="https://www.patreon.com/arcaniax/posts?ref=playhive.com">Arceon</a>, work with our custom blocks without modification.</p><p>Our client mod then downloads these assets from our server, registering them as custom blocks, much like any other Fabric mod might do. Our builders can then pull any custom blocks they want from the custom blocks creative menu.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../../../../content/images/2022/11/Custom-Blocks-Creative.jpg" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="../../../../content/images/size/w600/2022/11/Custom-Blocks-Creative.jpg 600w, ../../../../content/images/size/w1000/2022/11/Custom-Blocks-Creative.jpg 1000w, ../../../../content/images/size/w1600/2022/11/Custom-Blocks-Creative.jpg 1600w, ../../../../content/images/2022/11/Custom-Blocks-Creative.jpg 1920w" sizes="(min-width: 1200px) 1200px"><figcaption>Our custom blocks are added to a special tab in the Java Edition creative inventory.</figcaption></figure><p>If we add new blocks, a client reboot will automatically download the updated data. No mod update is necessary. </p><h2 id="creating-blocks">Creating Blocks</h2><p>In addition to being able to use these blocks in the building process, it was also important that adding these blocks was time efficient. Adding custom blocks to Minecraft: Bedrock Edition can be slow and cumbersome.</p><p>So we made another tool, lovingly named Blockie. Blockie had two goals:</p><ul><li>Make adding blocks to the server painless.</li><li>Give the power of implementation and testing to our art team.</li></ul><p>Blockie can create blocks from just an image file. It will automatically make all required assets and insert them into any configured resource/behavior pack. Materials are automatically calculated by analyzing the alpha channels of the texture. Even the block name is sourced from the source image name.</p><p>If a custom geometry is required, a geometry file with the same name is placed in the images' directory, and Blockie does the rest. Blockie detects if multiple blocks use the same geometry and will only import it once, ensuring we don't waste resources.</p><p>More complex blocks can be configured using a custom Blockie meta config. This can be done manually or by using our custom <a href="https://www.blockbench.net/?ref=playhive.com">Blockbench</a> plugin.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../../../../content/images/2022/11/Custom-Blocks-Blockbench-1.jpg" class="kg-image" alt="" loading="lazy" width="1400" height="800" srcset="../../../../content/images/size/w600/2022/11/Custom-Blocks-Blockbench-1.jpg 600w, ../../../../content/images/size/w1000/2022/11/Custom-Blocks-Blockbench-1.jpg 1000w, ../../../../content/images/2022/11/Custom-Blocks-Blockbench-1.jpg 1400w" sizes="(min-width: 1200px) 1200px"><figcaption>Our custom Blockbench plugin allows our art team to configure their Hive blocks easily.</figcaption></figure><p>Additionally, Blockie can generate the required code for our custom server software, requiring little to no dev time. This is a running theme: we want to make processes as efficient as possible so we can focus on what we do best, content.</p><figure class="kg-card kg-video-card kg-card-hascaption"><div class="kg-video-container"><video src="../../../../content/media/2022/11/Custom-Blocks-Collision.mp4" poster="https://img.spacergif.org/v1/1280x720/0a/spacer.png" width="1280" height="720" playsinline="" preload="metadata" style="background: transparent url('../../../../content/images/2022/11/media-thumbnail-ember313.jpg') 50% 50% / cover no-repeat;"></video><div class="kg-video-overlay"><button class="kg-video-large-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M23.14 10.608 2.253.164A1.559 1.559 0 0 0 0 1.557v20.887a1.558 1.558 0 0 0 2.253 1.392L23.14 13.393a1.557 1.557 0 0 0 0-2.785Z"></path></svg></button></div><div class="kg-video-player-container"><div class="kg-video-player"><button class="kg-video-play-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M23.14 10.608 2.253.164A1.559 1.559 0 0 0 0 1.557v20.887a1.558 1.558 0 0 0 2.253 1.392L23.14 13.393a1.557 1.557 0 0 0 0-2.785Z"></path></svg></button><button class="kg-video-pause-icon kg-video-hide"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><rect x="3" y="1" width="7" height="22" rx="1.5" ry="1.5"></rect><rect x="14" y="1" width="7" height="22" rx="1.5" ry="1.5"></rect></svg></button><span class="kg-video-current-time">0:00</span><div class="kg-video-time">/<span class="kg-video-duration"></span></div><input type="range" class="kg-video-seek-slider" max="100" value="0"><button class="kg-video-playback-rate">1&#215;</button><button class="kg-video-unmute-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15.189 2.021a9.728 9.728 0 0 0-7.924 4.85.249.249 0 0 1-.221.133H5.25a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1.794a.249.249 0 0 1 .221.133 9.73 9.73 0 0 0 7.924 4.85h.06a1 1 0 0 0 1-1V3.02a1 1 0 0 0-1.06-.998Z"></path></svg></button><button class="kg-video-mute-icon kg-video-hide"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M16.177 4.3a.248.248 0 0 0 .073-.176v-1.1a1 1 0 0 0-1.061-1 9.728 9.728 0 0 0-7.924 4.85.249.249 0 0 1-.221.133H5.25a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h.114a.251.251 0 0 0 .177-.073ZM23.707 1.706A1 1 0 0 0 22.293.292l-22 22a1 1 0 0 0 0 1.414l.009.009a1 1 0 0 0 1.405-.009l6.63-6.631A.251.251 0 0 1 8.515 17a.245.245 0 0 1 .177.075 10.081 10.081 0 0 0 6.5 2.92 1 1 0 0 0 1.061-1V9.266a.247.247 0 0 1 .073-.176Z"></path></svg></button><input type="range" class="kg-video-volume-slider" max="100" value="100"></div></div></div><figcaption>Behind the scenes: testing server-side collision boxes. Fake players with dynamically generated skins (white boxes) show the server-side calculated collision. Testing only, does not show planned gameplay changes.</figcaption></figure><p>To put into perspective the power of a tool like this, we added 200 custom blocks in just a few hours (excluding the time required to create the models and textures). This is a huge improvement over our process during the Sonic x Hive event, which took days of manual configuration and testing.</p><h2 id="why">Why?</h2><p>Custom blocks will be used in short-term projects to enhance world-building and provide new gameplay opportunities. In the long term, we expect it will help unleash our creativity and help us achieve some bigger ideas.</p><p>Currently, we're in our late-stage testing phases and hope to deploy the first iteration of custom blocks to The Hive shortly.</p><p>We hope you enjoy this insight into the behind-the-scenes of The Hive. If there's something you'd like to hear more about, please let us know on <a href="https://discord.gg/hive?ref=playhive.com">Discord</a>.</p>
+    </section>
+
+
+</article>
+</main>
+
+
+
+
+            <aside class="read-more-wrap outer">
+                <div class="read-more inner">
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="../../../../2024/03/29/bedwars-pre-season-beta/index.htm">
+
+        <img class="post-card-image" srcset="../../../../content/images/size/w300/2024/03/bedwars_release5.png 300w,
+                    ../../../../content/images/size/w600/2024/03/bedwars_release5.png 600w,
+                    ../../../../content/images/size/w1000/2024/03/bedwars_release5.png 1000w,
+                    ../../../../content/images/size/w2000/2024/03/bedwars_release5.png 2000w" sizes="(max-width: 1000px) 400px, 800px" src="../../../../content/images/size/w600/2024/03/bedwars_release5.png" alt="BedWars: Pre-Season Beta" loading="lazy">
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../../../../2024/03/29/bedwars-pre-season-beta/index.htm">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    BedWars: Pre-Season Beta
+                </h2>
+            </header>
+                <div class="post-card-excerpt">BedWars: Pre-Season Beta has been officially released!</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2024-03-30">Mar 30, 2024</time>
+                <span class="post-card-meta-length">3 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="../../../../2024/03/25/announcing-skyblock-mmo/index.htm">
+
+        <img class="post-card-image" srcset="../../../../content/images/size/w300/2024/03/image--3-.png 300w,
+                    ../../../../content/images/size/w600/2024/03/image--3-.png 600w,
+                    ../../../../content/images/size/w1000/2024/03/image--3-.png 1000w,
+                    ../../../../content/images/size/w2000/2024/03/image--3-.png 2000w" sizes="(max-width: 1000px) 400px, 800px" src="../../../../content/images/size/w600/2024/03/image--3-.png" alt="Announcing a brand new SkyBlock/MMO server, by The Hive" loading="lazy">
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../../../../2024/03/25/announcing-skyblock-mmo/index.htm">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Announcing a brand new SkyBlock/MMO server, by The Hive
+                </h2>
+            </header>
+                <div class="post-card-excerpt">We're excited to announce that this year, we'll be launching a brand new Bedrock Featured Server: a persistent SkyBlock/MMO.</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2024-03-25">Mar 25, 2024</time>
+                <span class="post-card-meta-length">1 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="../../../../2024/03/15/bed-wars-release-date/index.htm">
+
+        <img class="post-card-image" srcset="../../../../content/images/size/w300/2024/03/bw-1.jpg 300w,
+                    ../../../../content/images/size/w600/2024/03/bw-1.jpg 600w,
+                    ../../../../content/images/size/w1000/2024/03/bw-1.jpg 1000w,
+                    ../../../../content/images/size/w2000/2024/03/bw-1.jpg 2000w" sizes="(max-width: 1000px) 400px, 800px" src="../../../../content/images/size/w600/2024/03/bw-1.jpg" alt="BedWars: Release Date" loading="lazy">
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../../../../2024/03/15/bed-wars-release-date/index.htm">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    BedWars: Release Date
+                </h2>
+            </header>
+                <div class="post-card-excerpt">We're excited to announce that BedWars will be released on the 29th of March!</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2024-03-15">Mar 15, 2024</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                </div>
+            </aside>
+
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="../../../../index.htm">The Hive - Minecraft Server</a> &copy; 2024</section>
+            <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-careers"><a href="https://jobs.playhive.com">Careers</a></li>
+    <li class="nav-support"><a href="https://support.playhive.com">Support</a></li>
+    <li class="nav-become-a-helper"><a href="https://support.playhive.com/helper/">Become a Helper</a></li>
+    <li class="nav-become-a-partner"><a href="https://support.playhive.com/partners/">Become a Partner</a></li>
+</ul>
+
+            </nav>
+            <div class="gh-powered-by"><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script src="../../../../jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+</script>
+<script src="../../../../assets/built/casper.js?v=280c5cf32d"></script>
+<script>
+$(document).ready(function () {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $(".gh-content").fitVids();
+});
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="../../../../gtag/js?id=G-Y2WSVVSE2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y2WSVVSE2K');
+</script>
+
+<!-- Reamaze Support Portal -->
+<script type="text/javascript" async="" src="../../../../assets/reamaze.js"></script>
+
+<script type="text/javascript">
+    var _support = _support || { ui: {}, user: {} };
+    
+    _support["account"] = "hivebedrock";
+    _support["ui"]["contactMode"] = "mixed";
+    _support["ui"]["enableKb"] = "false";
+    
+    _support["ui"]["styles"] = {
+        widgetColor: "rgb(94, 34, 94)",
+    };
+    
+    _support["ui"]["widget"] = {
+        label: false,
+        icon: "chat",
+        position: "bottom-right",
+    };
+    
+    _support["apps"] = {
+        faq: { enabled: false },
+        recentConversations: {},
+        orders: {},
+    };
+</script>
+
+</body>
+</html>
